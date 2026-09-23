@@ -1,0 +1,231 @@
+  <!DOCTYPE html>
+  <html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css" rel="stylesheet">
+    <title>Myosotis</title>
+    <style>
+      *{margin: 0;padding: 0;box-sizing: border-box;}
+
+
+      body{ background-color: #f6f3ee; color: #4c4c4c;}
+
+        header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4% 5%;
+    width: 85%;
+    margin: auto;
+    position: relative;
+  }
+
+        .logo{width: 15%;/* border: 1px solid green;*/ padding: 1%;margin-bottom: 1%; position: absolute; left: 50%; transform: translateX(-50%);}
+
+        nav{ gap: 20px; 
+          display: flex; 
+          font-weight: bolder; 
+          padding: 1%; 
+          text-align: center;  
+          align-items: center; 
+          font-size: small; 
+          margin-left: auto;
+          }
+
+      a{ color: #4c4c4c; text-decoration: none; margin-bottom: 3%; }
+
+      header ul{ list-style: none; }
+      /*--------------------------------------------------------------------------------*/
+
+  h3{
+    font-size: 1.7em;  /* 글자 크기 조절 */
+    font-family: "Inria Serif", serif;
+  }
+
+
+  #all{
+    padding: 5%;  /* 공간 만들기 */
+    width: 80%;  /* 가로 크기 조절 */
+    /*border: 2px solid green;*/
+    margin: 0 auto; /* 가운데 배치하기 */
+  }
+
+  .set{
+    display: flex;  /* 가로로 글상자와 그림 배치하기 */
+    gap: 12%; /* 글상자와 그림 띄우기 */
+    padding-bottom: 12%;  /* 아래에서 공간 띄우기 */
+  }
+
+  #pic img{
+    width: 63vh;  /* 그림 크기 조절 */
+  }
+
+  #text{
+    /*border: 1px solid black;*/
+    padding: 2%;  /* 글자 조금 떨어트리기 */
+    text-align: left; /* 글자 왼쪽으로 붙이기 */
+    margin-top: 10%;  /* 글자 아래로 내리기 */
+  }
+
+  .note h3{
+    padding-top: 4%; /* 위에 공간 만들기 */
+    text-align: center; /* 가운데 글자 배치 */
+  }
+
+  .note ul{
+    display: flex;  /* 글자 한 줄로 만들기 */
+    padding: 6%; /* 공간 창출 */
+    text-align: center; /* 글자 가운데 오게 만들기 */
+  }
+
+  .tag{
+    margin-bottom: 20px;/* 글자 공간 만들기 */
+    font-size: 1.3em;/* 폰트 사이즈 조절 */
+  }
+  
+  .eng{
+    font-size: 1.2em;/* 폰트 굵기 조절 */
+    font-weight: 300;/* 글자 크기 조절 */
+    }
+
+  .ko{
+    font-weight: 300;/* 폰트 사이즈 조절 */
+    font-size: 0.9em;/* 글자 크기 조절 */
+    padding-bottom: 7%;/* 글자별 공간 조율 */
+  }
+
+  .note li{
+        list-style: none;/* 점 없애기 */
+        flex: 1;  /* 공간 나눠가지기 */
+        }
+  
+  hr{
+    width: 80%; /* 선 크기 자르기 */
+    margin: 5% auto;/* 선 위아래 공간 조절 */
+  }
+/*---------------------------------------------------------------------------*/
+  .lion{
+    /*border: 2px solid wheat;*/
+    padding: 20% 0; /* 위 아래 공간창출*/
+    display: flex;  /* 글자들 가운데 배치 */
+    text-align: center;/* 글자 가운데 배치 */
+    justify-content: space-between;
+  }
+  .hand{
+    margin-bottom: 20px;/* 글자 공간 만들기 */
+    font-size: 1.2em;
+    font-weight: 300;/* 폰트 사이즈 조절 */
+  }
+  .foot{
+    font-weight: 320;/* 폰트 사이즈 조절 */
+    font-size: 1.1em;/* 글자 크기 조절 */
+  }
+
+
+
+  .english{
+    font-family: "Inria Serif"  ;
+  }
+
+  .kor{
+    font-family: 'MaruBuriExtraLight';
+  }
+  </style>
+  </head>
+  <body>
+        <header>
+      <div class="logo">
+        <a href="포폴만들기.html"><img src="img/logo.svg" alt="사진"></a>
+      </div>
+      <nav>
+        <a href="#">ABOUT</a>
+        <a href="#" onclick="menu()">MENU</a>
+        <ul class="sub">
+          <li><a href="#">향수 라인업</a></li>
+          <li><a href="#">Myosotis 스토리</a></li>
+          <li><a href="#">언어</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="all">
+        <div class="set">
+          <div id="pic">
+            <img src="img/ghost.png" alt="사진">
+          </div>
+          <div id="text">
+            <h3 class="english">MOJAVE GHOST — BYREDO</h3><br>
+            <p class="kor">
+              바이레도에서 2014년에 출시된 플로럴 프레시 계열의 인기 남녀 공용 향수입니다.<br><br>  
+              사포테의 은은한 달콤함으로 시작해 바이올렛과 매그놀리아의 깨끗하고 부드러운 플로럴 향이 이어지며 신비롭고 몽환적인 분위기를 만들어냅니다. 시간이 지나면서 크리미한 샌달우드와 머스크, 시더우드가 어우러져 차분하고 고급스러운 여운을 남깁니다.<br><br>
+              가볍고 자연스러우면서도 세련된 인상을 주는 향으로, 한여름의 따뜻한 공기 속에서 은은하게 피어나는 꽃처럼 맑고 부드러운 분위기를 담아낸 유니섹스 향수입니다.
+            </p>
+            <div class="lion">
+              <div class="dear">
+                <span>
+                <p class="hand kor">출시년도</p>
+                <p class="foot english">2014</p>
+                </span>
+              </div>
+              <div class="dear">
+                <span>
+                  <p class="hand kor">농도</p>
+                  <p class="foot english">Eau de Parfum</p>
+                </span>
+              </div>
+              <div class="dear">
+                <span>
+                  <p class="hand kor">지속시간</p>
+                  <p class="foot english">6H~+</p>
+                </span>
+              </div>
+            </div>
+          </div>        
+        </div>
+        <div class="note">
+          <h3 class="english">SCENT NOTES</h3>
+          <hr>
+          <ul>
+            <li>
+              <p class="tag english">TOP</p>
+              <span>
+                <p class="eng english">Sapote</p>
+                <p class="ko kor">사보테</p>
+                <p class="eng english">Ambrette</p>
+                <p class="ko kor">엠브레트</p>
+              </span>
+            </li>
+            <li>
+              <p class="tag english">HEART</p>
+              <span>
+                <p class="eng english">Violet</p>
+                <p class="ko kor">바이올렛</p>
+                <p class="eng english">Sandalwood</p>
+                <p class="ko kor">샌달우드</p>
+                <p class="eng english">Magnolia</p>
+                <p class="ko kor">매그놀리아</p>
+              </span>
+            </li>
+            <li>
+              <p class="tag english">BASE</p>
+                <span>
+                  <p class="eng english">Musk</p>
+                  <p class="ko kor">머스크</p>
+                  <p class="eng english">Amber</p>
+                  <p class="ko kor">앰버</p>
+                  <p class="eng english">Cedarwood</p>
+                  <p class="ko kor">시더우드</p>
+                </span>
+            </li>
+            </ul>
+          </div>
+      </div>
+    </main>
+  </body>
+<script>
+
+</script>
+  </html>
