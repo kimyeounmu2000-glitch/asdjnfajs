@@ -1,0 +1,299 @@
+      *{margin: 0;padding: 0;box-sizing: border-box;}
+
+
+      body{ background-color: #f6f3ee; color: #4c4c4c;}
+
+
+        header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0% 5%;
+                padding-top: 4%;
+                padding-bottom: 7%;
+                width: 85%;
+                margin: auto;
+                position: relative;
+              }
+
+      .logo{
+          width: 15%;
+          /* border: 1px solid green;*/ 
+          padding: 1%;
+          margin-bottom: 1%; 
+          position: absolute; 
+          left: 50%; 
+          transform: translateX(-50%);
+        }
+
+      nav{ 
+          display: flex; 
+          font-weight: bolder; 
+          padding: 0% 5%; 
+          text-align: center;  
+          align-items: center; 
+          font-size: small; 
+          margin-left: auto;
+        }
+      
+      .sub{
+            display: none;
+            position: absolute;
+            bottom: 1%;
+            left: 83.5%;
+            text-align: right;
+            }
+      
+      .sub li{
+            border-bottom: 1px solid #4c4c4c;
+            line-height: 3;
+          }
+
+      a{ color: #4c4c4c; text-decoration: none; margin-bottom: 3%; }
+
+      header ul{ list-style: none; }
+
+
+
+    /*---------------------------------------------------*/
+      .main-image{
+        display: flex;
+        justify-content: space-between;
+        padding: 6% 0px;  
+      }
+      #main-image{
+        background-image: url("img/main.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 70%;
+        height: 100vh;
+        left: 17%;
+        position: relative;
+      }
+
+      .maint{
+        position: absolute;
+        color: #4c4c4c;
+        left: 16%;
+        top: 46%;
+      }
+
+      h4{       /*메인 사진 속 텍스트*/
+        font-size: 1.1rem;
+        font-weight: bolder;
+      }
+
+
+      hr{
+        width: 95%;
+        margin: 0.5% auto;
+      }
+
+
+
+
+      section{
+        /*border: 3px solid green;*/
+        width: 90%;
+        gap: 10;
+        margin: auto;
+        padding: 10% 0%;
+      }
+      section>h2{
+        padding-bottom: 7%;
+        font-size: 2em;
+      }
+
+      .se1{
+        display: flex;
+        justify-content: space-between;
+      }
+      .season:hover{
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+          }
+      .season{
+        /*border: 3px solid purple;*/
+        display: inline-block;
+        justify-content: space-around;
+        width: 23%;
+        height: 70vh;
+        text-align: center;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .sea{
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 23%;
+        height: 6%;
+        border: 1px solid black;
+        border-radius: 16%;
+        opacity: 0;
+      }
+
+      .season:hover .qha + .sea{
+        background-color: #f6f3ee;
+        color: black;
+        opacity: 0.8;
+      }
+      .season:hover .si+ .sea{
+        background-color: #f6f3ee;
+        color: black;
+        opacity: 0.8;
+      }
+      .season:hover .aut+ .sea{
+        background-color: #f6f3ee;
+        color: black;
+        opacity: 0.8;
+      }
+      .season:hover .win + .sea{
+        background-color: #f6f3ee;
+        color: black;
+        opacity: 0.8;
+      }
+      
+      .qha{/*봄 사진*/
+        background-image: url("img/qha.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0px auto;
+        width: 100%;
+        height: 70vh;
+        padding: 20%;
+      }
+        .si{/*여름 사진*/
+        background-image: url("img/dufma.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: auto;
+        width: 100%;
+        height: 70vh;
+      }
+        .aut{/*가을 사진*/
+        background-image: url("img/leaves.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: auto;
+        width: 100%;
+        height: 70vh;
+      }
+        .win{/*겨울 사진*/
+        background-image: url("img/rudnf.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: auto;
+        width: 100%;
+        height: 70vh;
+      }
+      section, .long, footer, .smell{
+        text-align: center;
+      }
+
+
+
+
+/*--------------------------------------향수 지속---------------------------------------*/      
+      .long{
+        /*border: 3px solid black;*/
+        display: flex;
+        width: 80%;
+        margin: 2% auto;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-bottom: 10%;
+      }
+
+
+      h4{font-size: 1.1rem;
+        font-weight: bolder;
+      }
+
+        .smell{           /*2번째 챕터 제목*/
+          font-size: 2em;
+          padding-top: 10%;
+        }
+
+
+      .pu{
+        height: 40vh;
+        /*border: 3px solid pink;*/
+        line-height: 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        }
+
+        .pu:nth-child(2),        
+        .pu:nth-child(4){
+          text-align: left;
+        }       
+        .pu:nth-child(1),        
+        .pu:nth-child(3){
+          text-align: right;
+        }
+          
+
+        .pu:nth-child(2) .num,        
+        .pu:nth-child(4) .num{
+          order: 1;
+        }        
+        .pu:nth-child(2) .par,        
+        .pu:nth-child(4) .par{
+          order: 2;
+        }
+
+
+
+        .num{font-size:12em;      /*부향률 숫자 조절*/
+            justify-content: center;
+            display: flex;
+            align-items: center;
+      }
+
+
+
+
+
+/*-----------------------------------footer 부분------------------------------------*/        
+        footer{
+          padding-top: 10%;
+          padding-bottom: 5%;
+        }
+
+      footer img{
+        width: 60%;
+        height: 50%;
+        /*border: 6px solid #d8cab5;*/
+      }
+
+      footer h3{
+        font-size: 2em;
+        padding-bottom: 5%;
+      }
+
+
+      .foot{
+        position: relative;
+        height: 85%;
+        width: 85%;
+        margin: auto;
+      }
+      .foot>p{
+        position: absolute;
+        left: 26%;
+        bottom: 81%;
+        font-size: 1.2em;
+        color: #424242;
+        font-weight: bold;
+      }
+      
+  .english{
+    font-family: "Inria Serif"  ;
+  }
+
+  .kor{
+    font-family: 'MaruBuriExtraLight';
+  }

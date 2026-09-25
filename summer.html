@@ -3,142 +3,69 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css" rel="stylesheet">
     <title>Myosotis summer</title>
-    <style>
-      *{margin: 0;padding: 0;box-sizing: border-box;}
-
-      body{ background-color: #f6f3ee; color: #4c4c4c;}
-
-        header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0% 5%;
-    padding-top: 4%;
-    padding-bottom: 7%;
-    width: 85%;
-    margin: auto;
-    position: relative;
-  }
-
-        .logo{width: 15%;/* border: 1px solid green;*/ padding: 1%;margin-bottom: 1%; position: absolute; left: 50%; transform: translateX(-50%);}
-
-        nav{ gap: 20px; display: flex; font-weight: bolder; padding: 1%; text-align: center;  align-items: center; font-size: small; margin-left: auto;}
-
-      a{ color: #4c4c4c; text-decoration: none; margin-bottom: 3%; }
-
-      header ul{ list-style: none; }
-      /*--------------------------------------------------------------------------------*/
-
-      .main{
-        margin: 5% ;
-        width: 80%;
-        padding: 3% 0%;
-        margin: 0px auto;
-      }
-
-      main{
-        display: flex;        
-        justify-content: space-between;
-        width: 100% ;
-        height: 100%;
-        padding: 5% 1%;
-      }
-      .sup{
-        /*border: 2px solid violet;*/
-        display: flex;
-        margin: 0 auto;
-      }
-      .season{
-        background-image: url(img/dufma.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        width: 80vh;
-        height: 70vh;
-      }
-
-      .wirte{
-        margin-top: 20%;
-      }
-
-      .box{
-        /*border: 2px solid black;*/
-        width: 40vh;
-        height: 60vh;
-      }
-
-
-      
-      h3,h5{
-        padding: 0% 5%; 
-        /*border: 1px solid black;*/
-      }
-
-      .b1{background-image: url(img/ck.png);}
-      
-      .b2{background-image: url(img/dirty.png);}
-      
-      .b3{background-image: url(img/lightblue.png);}
-      
-      .b4{background-image: url(img/ghost.png);}
-      .b1,.b2,.b3,.b4{
-                      background-repeat: no-repeat;
-                      background-position: center;
-                      background-size: contain;
-                      }
-  </style>
+    <link rel="stylesheet" href="season.css">
   </head>
   <body>
-        <header>
+    <header>
       <div class="logo">
         <a href="index.html"><img src="img/logo.svg" alt="사진"></a>
       </div>
       <nav>
-        <a href="#">ABOUT</a>
-        <a href="#" onclick="menu()">MENU</a>
+        <a class="english" href="#" onclick="menu()">MENU</a>
         <ul class="sub">
-          <li><a href="#">향수 라인업</a></li>
-          <li><a href="#">Myosotis 스토리</a></li>
-          <li><a href="#">언어</a></li>
+          <li><a class="kor" href="#">향수 라인업</a></li>
+          <li><a class="kor" href="#">Myosotis 스토리</a></li>
+          <li><a class="kor" href="#">언어</a></li>
         </ul>
       </nav>
     </header>
     <div class="main">
       <div class="sup">
         <div class="wirte">
-          <h2>summer perfume</h2>
-          <p>
+          <h2 class="english">summer perfume</h2>
+          <p class="kor">
             여름의 열기가 짙어지며 태양이 가장 뜨겁게 내리쬐는 계절, 푸른 바다와 시원한 바람이 떠오르는 싱그럽고 청량한 향으로 표현한 향수들을 만나보세요.
           </p>
         </div><!--write-->
         <div class="season"></div>
       </div><!--sub-->
     </div><!--main-->
-    <main>
+    <main class="english"> 
       <a href="#">
-        <div class="box b1"></div>
+        <div class="box b1"><img src="img/ck.png" alt="사진"></div>
           <h3>CK one</h3>
-          <h5>Calin Klein</h5>
+          <h5>Calvin Klein</h5>
       </a>
       <a href="#">
-        <div class="box b2"></div>
+        <div class="box b2"><img src="img/dirty.png" alt="사진"></div>
           <h3>DIRTY</h3>
           <h5>Lush</h5>
       </a>
       <a href="#">
-        <div class="box b3"></div>
+        <div class="box b3"><img src="img/lightblue.png" alt="사진"></div>
           <h3>Light Blue</h3>
           <h5>Dolce & Gabbana</h5>
       </a>
       <a href="ghost.html">
-        <div class="box b4"></div>
+        <div class="box b4"><img src="img/ghost.png" alt="사진"></div>
           <h3>Mojave Ghost</h3>
           <h5>Byredo</h5>
       </a>
     </main>
   </body>
 <script>
-
+    function menu(){
+      if($('.sub').is(':visible')){
+        $('.sub').css('display','none');
+      }
+      else{
+      $('.sub').css('display','block')
+    }
+    };
 </script>
   </html>

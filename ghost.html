@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css" rel="stylesheet">
@@ -13,26 +14,50 @@
 
       body{ background-color: #f6f3ee; color: #4c4c4c;}
 
+
         header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 4% 5%;
-    width: 85%;
-    margin: auto;
-    position: relative;
-  }
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0% 5%;
+                padding-top: 4%;
+                padding-bottom: 7%;
+                width: 85%;
+                margin: auto;
+                position: relative;
+              }
 
-        .logo{width: 15%;/* border: 1px solid green;*/ padding: 1%;margin-bottom: 1%; position: absolute; left: 50%; transform: translateX(-50%);}
+      .logo{
+          width: 15%;
+          /* border: 1px solid green;*/ 
+          padding: 1%;
+          margin-bottom: 1%; 
+          position: absolute; 
+          left: 50%; 
+          transform: translateX(-50%);
+        }
 
-        nav{ gap: 20px; 
+      nav{ 
           display: flex; 
           font-weight: bolder; 
-          padding: 1%; 
+          padding: 0% 5%; 
           text-align: center;  
           align-items: center; 
           font-size: small; 
           margin-left: auto;
+        }
+      
+      .sub{
+            display: none;
+            position: absolute;
+            bottom: 1%;
+            left: 84%;
+            text-align: right;
+            }
+      
+      .sub li{
+            border-bottom: 1px solid #4c4c4c;
+            line-height: 3;
           }
 
       a{ color: #4c4c4c; text-decoration: none; margin-bottom: 3%; }
@@ -138,15 +163,14 @@
   <body>
         <header>
       <div class="logo">
-        <a href="포폴만들기.html"><img src="img/logo.svg" alt="사진"></a>
+        <a href="index.html"><img src="img/logo.svg" alt="사진"></a>
       </div>
       <nav>
-        <a href="#">ABOUT</a>
-        <a href="#" onclick="menu()">MENU</a>
+        <a class="english" href="#" onclick="menu()">MENU</a>
         <ul class="sub">
-          <li><a href="#">향수 라인업</a></li>
-          <li><a href="#">Myosotis 스토리</a></li>
-          <li><a href="#">언어</a></li>
+          <li><a class="kor" href="#">향수 라인업</a></li>
+          <li><a class="kor" href="#">Myosotis 스토리</a></li>
+          <li><a class="kor" href="#">언어</a></li>
         </ul>
       </nav>
     </header>
@@ -225,7 +249,14 @@
       </div>
     </main>
   </body>
-<script>
-
-</script>
+  <script>
+    function menu(){
+      if($('.sub').is(':visible')){
+        $('.sub').css('display','none');
+      }
+      else{
+      $('.sub').css('display','block')
+      }
+    };
+  </script>
   </html>
