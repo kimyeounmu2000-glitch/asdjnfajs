@@ -8,314 +8,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css" rel="stylesheet">
     <title>Myosotis winter</title>
-    <style>
-      *{margin: 0;padding: 0;box-sizing: border-box;}
-
-
-      body{ background-color: #f6f3ee; color: #4c4c4c;}
-
-
-        header{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 0% 5%;
-                padding-top: 4%;
-                padding-bottom: 7%;
-                width: 85%;
-                margin: auto;
-                position: relative;
-              }
-
-      .logo{
-          width: 15%;
-          /* border: 1px solid green;*/ 
-          padding: 1%;
-          margin-bottom: 1%; 
-          position: absolute; 
-          left: 50%; 
-          transform: translateX(-50%);
-        }
-
-      nav{ 
-          display: flex; 
-          font-weight: bolder; 
-          padding: 0% 5%; 
-          text-align: center;  
-          align-items: center; 
-          font-size: small; 
-          margin-left: auto;
-        }
-      
-      .sub{
-            display: none;
-            position: absolute;
-            bottom: 1%;
-            left: 84%;
-            text-align: right;
-            }
-      
-      .sub li{
-            border-bottom: 1px solid #4c4c4c;
-            line-height: 3;
-          }
-
-      a{ color: #4c4c4c; text-decoration: none; margin-bottom: 3%; }
-
-      header ul{ list-style: none; }
-      /*--------------------------------------------------------------------------------*/
-
-      .main{
-        margin: 5% ;
-        width: 80%;
-        padding: 3% 0%;
-        margin: 0px auto;
-      }
-
-      main{
-        display: flex;        
-        justify-content: space-between;
-        width: 100% ;
-        height: 100%;
-        padding: 5% 1%;
-      }
-      .sup{
-        /*border: 2px solid violet;*/
-        display: flex;
-        margin: 0 auto;
-      }
-      .season{
-        background-image: url(rudnf.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        width: 80vh;
-        height: 70vh;
-      }
-
-      .wirte{
-        margin-top: 20%;
-      }
-
-      .box{
-        /*border: 2px solid black;*/
-        width: 40vh;
-        height: 60vh;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      .box img{
-        width: 100%;
-        height: 100%;
-      }
-      .box:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-      }
-      
-      h3,h5{
-        padding: 0% 5%; 
-        /*border: 1px solid black;*/
-      }
-
-
-      /*
-      .b1{background-image: url(img/italica.png);}
-      
-      .b2{background-image: url(img/the.png);}
-      
-      .b3{background-image: url(img/Himalaya.png);}
-      
-      .b4{background-image: url(img/540.png);}
-      
-      .b1,.b2,.b3,.b4{
-                      background-repeat: no-repeat;
-                      background-position: center;
-                      background-size: contain;
-                      }*/
-                      
-    @media screen and (max-width:1024px){
-    .sup {
-      align-items: center;
-      gap: 5%;
-    }
-    .season{
-      min-width: 425px;
-    }    
-    header {
-      padding-top: 7%;
-      padding-bottom: 2%;
-    }    
-    main{
-      justify-content: space-between;
-    }
-    
-    main > a {
-      width: 25%;
-      margin-bottom: 3%;
-    }    
-    .box {
-      width: 210px;
-      height: 320px;
-    }  
-    h3{
-      font-size: 0.9em;
-    }
-    h5{
-      font-size: 0.7em;
-    }    
-    .wirte h2{
-      font-size: 1.1em;
-      padding-bottom: 5%;
-    }
-    .wirte p{
-      font-size: 0.8em;
-      line-height: 1.6;
-    }
-    
-    }
-/*-----------------------------------------------------------*/
-    @media screen and (max-width:768px) {
-      .logo{
-        width: 30%;
-      }
-    .sup {
-      flex-direction: column;
-      align-items: center;
-      padding-bottom: 20%;
-    }
-    .season{
-      width: 75%;
-      min-width: 425px;
-      margin-top: 6%;
-    }
-    
-    main{
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-evenly;
-    }
-    
-    main > a {
-      width: 47%;
-      margin-bottom: 3%;
-    }
-    header {
-      padding-top: 7%;
-      padding-bottom: 1%;
-    }
-    .wirte h2{
-      font-size: 1.2em;
-      padding-bottom: 5%;
-    }
-    .wirte p{
-      font-size: 0.8em;
-      line-height: 1.6;
-    }
-    
-    }
-/*---------------------------------------------------------------------*/
-    @media screen and (max-width:480px) {
-    .logo{
-      width: 40%;
-    }
-    header {
-      padding-top: 12%;
-      padding-bottom: 1%;
-    }
-    .sup {
-      flex-direction: column;
-      align-items: center;
-      padding-bottom: 20%;
-    }
-    .season{
-      width: 75%;
-      min-width: 375px;
-      margin-top: 6%;
-    }    
-    main{
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-evenly;
-      padding-bottom: 10%;
-    }
-    main > a {
-      width: 46%;
-      margin-bottom: 5%;
-    }
-    .box {
-      width: 190px;
-      height: 305px;
-    }     
-    .wirte h2{
-      font-size: 1.1em;
-      padding-bottom: 5%;
-    }
-    .wirte p{
-      font-size: 0.7em;
-      line-height: 1.6;
-    }
-    }
-
-/*--------------------------------------------------------------------------*/
-    @media screen and (max-width:375px) {
-    .logo{
-      width: 40%;
-    }
-    header {
-      padding-top: 12%;
-      padding-bottom: 1%;
-    }
-    .sup {
-      flex-direction: column;
-      align-items: center;
-      padding-bottom: 20%;
-    }    
-    .season{
-      width: 65%;
-      min-width: 325px;
-      margin-top: 6%;
-    }    
-    main{
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-evenly;
-      padding-bottom: 13%;
-    }
-    main > a {
-      width: 47%;
-      margin-bottom: 9%;
-    }
-    .box {
-      width: 175px;
-      height: 290px;
-    } 
-    .wirte{
-      width: 85%;
-      align-items: center;
-    }
-    .wirte h2{
-      font-size: 1.2em;
-      padding-bottom: 5%;
-    }
-    .wirte p{
-      font-size: 0.8em;
-      line-height: 1.6;
-    }
-    }
-    
-  .english{
-    font-family: "Inria Serif"  ;
-  }
-
-  .kor{
-    font-family: 'MaruBuriExtraLight';
-  }
-  </style>
+    <link rel="stylesheet" href="season.css">
+    <link rel="stylesheet" href="season_winter_pic.css">
   </head>
   <body>
     <header>
       <div class="logo">
-        <a href="index.html"><img src="logo.svg" alt="사진"></a>
+        <a href="index.html"><img src="img/logo.svg" alt="사진"></a>
       </div>
       <nav>
         <a class="english" href="#" onclick="menu()">MENU</a>
@@ -339,22 +38,22 @@
     </div><!--main-->
     <main class="english">
       <a href="#">
-        <div class="box b1"><img src="Italica.png" alt="사진"></div>
+        <div class="box b1"><img src="img/Italica.png" alt="사진"></div>
           <h3>Italica</h3>
           <h5>Casamorati 1888</h5>
       </a>
       <a href="#">
-        <div class="box b2"><img src="the.png" alt="사진"></div>
+        <div class="box b2"><img src="img/the.png" alt="사진"></div>
           <h3>The Most Wanted Parfum</h3>
           <h5>Azzaro</h5>
       </a>
       <a href="#">
-        <div class="box b3"><img src="Himalaya.png" alt="사진"></div>
+        <div class="box b3"><img src="img/Himalaya.png" alt="사진"></div>
           <h3>Himalaya</h3>
           <h5>Creed</h5>
       </a>
       <a href="#">
-        <div class="box b4"><img src="540.png" alt="사진"></div>
+        <div class="box b4"><img src="img/540.png" alt="사진"></div>
           <h3>Baccarat Rouge 540</h3>
           <h5>Maison Francis Kurkdjian</h5>
       </a>

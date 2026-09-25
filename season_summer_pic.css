@@ -1,0 +1,8 @@
+    .season{
+        background-image: url(img/dufma.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 80vh;
+        height: 69vh;
+    }
