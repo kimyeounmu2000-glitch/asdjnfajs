@@ -68,7 +68,7 @@
         /*border: 1px solid violet;*/
       }
       #main-image{
-        background-image: url("img/main.jpg");
+        background-image: url("main.jpg");
         background-size: contain;
         background-repeat: no-repeat;
         width: 82%;
@@ -179,7 +179,7 @@
       }
       
       .qha{/*봄 사진*/
-        background-image: url("img/spring.png");
+        background-image: url("spring.png");
         background-size: contain;
         background-repeat: no-repeat;
         margin: 0px auto;
@@ -187,7 +187,7 @@
         height: 100%;
       }
         .si{/*여름 사진*/
-        background-image: url("img/summer.png");
+        background-image: url("summer.png");
         background-size: contain;
         background-repeat: no-repeat;
         margin: auto;
@@ -195,7 +195,7 @@
         height: 100%;
       }
         .aut{/*가을 사진*/
-        background-image: url("img/aut.png");
+        background-image: url("aut.png");
         background-size: contain;
         background-repeat: no-repeat;
         margin: auto;
@@ -203,7 +203,7 @@
         height: 100%;
       }
         .win{/*겨울 사진*/
-        background-image: url("img/winter.png");
+        background-image: url("winter.png");
         background-size: contain;
         background-repeat: no-repeat;
         margin: auto;
