@@ -1,57 +1,81 @@
-      *{margin: 0;padding: 0;box-sizing: border-box;}
+*{margin: 0;padding: 0;box-sizing: border-box;}
 
 
-      body{ background-color: #f6f3ee; color: #4c4c4c;}
+body{ background-color: #f6f3ee; color: #4c4c4c;}
 
 
-        header{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 0% 5%;
-                padding-top: 4%;
-                padding-bottom: 7%;
-                width: 85%;
-                margin: auto;
-                position: relative;
-              }
+header {
+        /*border: 3px solid darkcyan;*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        height: 100px;
+        margin: 2% auto;
+        padding: 0 5%;
+        position: relative;
+}
 
-      .logo{
-          width: 15%;
-          /* border: 1px solid green;*/ 
-          padding: 1%;
-          margin-bottom: 1%; 
-          position: absolute; 
-          left: 50%; 
-          transform: translateX(-50%);
-        }
+.logo {
+        width: 30%;
+        max-width: 300px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        /*border: 3px solid burlywood;*/
+}
 
-      nav{ 
-          display: flex; 
-          font-weight: bolder; 
-          padding: 0% 5%; 
-          text-align: center;  
-          align-items: center; 
-          font-size: small; 
-          margin-left: auto;
-        }
-      
-      .sub{
-            display: none;
-            position: absolute;
-            bottom: 1%;
-            left: 83.5%;
-            text-align: right;
-            }
-      
-      .sub li{
-            border-bottom: 1px solid #4c4c4c;
-            line-height: 3;
-          }
+nav {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bolder;
+        /*border: 2px solid cadetblue;*/
+        position: absolute;
+        top: 5%;
+        left: 0%;
+}
+.sub{
+    height: 1000%;
+    width: 250%;
+    /*border: 2px solid darkblue;*/
+    visibility: hidden;
+    transform: translateY(-30px);
+    opacity: 0;
+    transition: transform 300ms, opacity 300ms;
+    position: absolute;
+    top: 140%;
+    left: 0%;
+    text-align: left;
+    z-index: 99;
+    font-size: 15px;
+}
+.sub.open{
+  visibility: visible;
+  transform: translateY(0);
+  opacity: 1;
+}
 
-      a{ color: #4c4c4c; text-decoration: none; margin-bottom: 3%; }
+.sub li{
+    line-height: 5;
+    transition: 300ms;
+    transform: translateY(0);
+    opacity: 1;
+}
 
-      header ul{ list-style: none; }
+.sub li:hover{
+  background-color: #f6f3ee;
+  color: black;
+  opacity: 0.4;
+}
+
+a{ color: #4c4c4c; text-decoration: none; }
+
+header ul{ list-style: none; }
+
+
       /*--------------------------------------------------------------------------------*/
 
       .main{
@@ -73,14 +97,6 @@
         display: flex;
         margin: 0 auto;
       }
-      .season{
-        background-image: url(img/qha.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        width: 80vh;
-        height: 69vh;
-      }
 
       .wirte{
         margin-top: 20%;
@@ -94,7 +110,7 @@
         /*border: 2px solid black;*/
         width: 40vh;
         height: 60vh;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: transform 500ms ease, box-shadow 0.3s ease;
       }
       .box img{
         width: 100%;
@@ -107,6 +123,7 @@
       
       h3,h5{
         padding: 0% 5%; 
+        text-align: left;
         /*border: 1px solid black;*/
       }
           
@@ -118,264 +135,318 @@
         font-family: 'MaruBuriExtraLight';
       }
 
-  /*
-      .b1{
-        background-image: url(img/la.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      
-      .b2{
-        background-image: url(img/papier.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      
-      .b3{
-        background-image: url(img/coco.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      
-      .b4{
-        background-image: url(img/y.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
+    /*------------------------------------ 미디어 쿼리 ------------------------------------*/
 
-      .b1,.b2,.b3,.b4{
-                      background-repeat: no-repeat;
-                      background-position: center;
-                      background-size: contain;
-                      }
-    */
-    @media screen and (max-width:1024px){
-    .sup {
-      align-items: center;
-      gap: 5%;
-    }
-    .season{
-      min-width: 425px;
-    }    
-    header {
-      padding-top: 7%;
-      padding-bottom: 2%;
-    }    
-    main{
-      justify-content: space-between;
-    }
-    
-    main > a {
-      width: 25%;
-      margin-bottom: 3%;
-    }    
-    .box {
-      width: 210px;
-      height: 320px;
-    }  
-    h3{
-      font-size: 0.9em;
-    }
-    h5{
-      font-size: 0.7em;
-    }    
-    .wirte h2{
-      font-size: 1.1em;
-      padding-bottom: 5%;
-    }
-    .wirte p{
-      font-size: 0.8em;
-      line-height: 1.6;
-    }
-    
-    }
+@media screen and (min-width: 320px) {
 
-    @media screen and (max-width:768px) {
-      .logo{
-        width: 30%;
-      }
-    .sup {
-      flex-direction: column;
-      align-items: center;
-      padding-bottom: 20%;
-    }
-    .season{
-      width: 75%;
-      min-width: 425px;
-      margin-top: 6%;
-    }
-    
-    main{
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-evenly;
-      padding-bottom: 13%;
-    }
-    
-    main > a {
-      width: 32%;
-      margin-bottom: 3%;
-    }
-    header {
-      padding-top: 7%;
-      padding-bottom: 1%;
-    }
-    .wirte h2{
-      font-size: 1.2em;
-      padding-bottom: 5%;
-    }
-    .wirte p{
-      font-size: 0.8em;
-      line-height: 1.6;
-    }
-    .box {
-    width: 240px;
-    height: 350px;
+  .logo {
+    width: 40%;
+    text-align: center;
   }
-    }
-/*---------------------------------------------------------------------*/
-    @media screen and (max-width:480px) {
-    .logo{
-      width: 40%;
-    }
-    header {
-      padding-top: 12%;
-      padding-bottom: 1%;
-    }
-    .sup {
-      flex-direction: column;
-      align-items: center;
-      padding-bottom: 20%;
-    }
-    .season{
-      width: 75%;
-      min-width: 375px;
-      margin-top: 6%;
-    }    
-    main{
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-evenly;
-      padding-bottom: 10%;
-    }
-    main > a {
-      width: 46%;
-      margin-bottom: 5%;
-    }
-    .box {
-      width: 190px;
-      height: 305px;
-    }     
-    .wirte h2{
-      font-size: 1.1em;
-      padding-bottom: 5%;
-    }
-    .wirte p{
-      font-size: 0.7em;
-      line-height: 1.6;
-    }
-    }
+
+  nav{
+    font-size: 7px;
+  }
+
+  header {
+    padding-top: 12%;
+    padding-bottom: 1%;
+  }
+
+  .sup {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20%;
+  }
+
+  .season {
+    width: 80%;
+    margin-top: 6%;
+    align-items: center;
+  }
+
+  main {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 13%;
+  }
+
+  main > a {
+    width: 47%;
+    margin-bottom: 9%;
+  }
+
+  .box {
+    width: 145px;
+    height: 270px;
+  }
+
+  .wirte {
+    width: 85%;
+    align-items: center;
+  }
+
+  .wirte h2 {
+    font-size: 1.2em;
+    padding-bottom: 5%;
+  }
+
+  .wirte p {
+    font-size: 0.8em;
+    line-height: 1.6;
+  }
+}
 
 
-    @media screen and (max-width:375px) {
-    .logo{
-      width: 40%;
-      text-align: center;
-    }
-    nav{
-      font-size: 0.8em;
-    }
+/*------------------------------------ 375px ------------------------------------*/
+
+@media screen and (min-width: 375px) {
+
+  .logo {
+    width: 40%;
+    text-align: center;
+  }
+
+
+nav{
+  font-size: 8px;
+}
+
+  header {
+    padding-top: 12%;
+    padding-bottom: 1%;
+  }
+
+  .sup {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20%;
+  }
+
+  .season {
+    width: 65%;
+    min-width: 325px;
+    margin-top: 6%;
+  }
+
+  main {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 13%;
+  }
+
+  main > a {
+    width: 47%;
+    margin-bottom: 9%;
+  }
+
+  .box {
+    width: 175px;
+    height: 290px;
+  }
+
+  .wirte {
+    width: 85%;
+    align-items: center;
+  }
+
+  .wirte h2 {
+    font-size: 1.2em;
+    padding-bottom: 5%;
+  }
+
+  .wirte p {
+    font-size: 0.8em;
+    line-height: 1.6;
+  }
+}
+
+
+/*------------------------------------ 480px ------------------------------------*/
+
+@media screen and (min-width: 480px) {
+
+  .logo {
+    width: 40%;
+  }
+
+  header {
+    padding-top: 12%;
+    padding-bottom: 1%;
+  }
+nav{
+    font-size: 11px;
+}
+
+  .sup {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20%;
+  }
+
+  .season {
+    width: 75%;
+    min-width: 375px;
+    margin-top: 6%;
+  }
+
+  main {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 10%;
+  }
+
+  main > a {
+    width: 46%;
+    margin-bottom: 5%;
+  }
+
+  .box {
+    width: 190px;
+    height: 305px;
+  }
+
+  .wirte h2 {
+    font-size: 1.1em;
+    padding-bottom: 5%;
+  }
+
+  .wirte p {
+    font-size: 0.7em;
+    line-height: 1.6;
+  }
+}
+
+
+/*------------------------------------ 768px ------------------------------------*/
+
+@media screen and (min-width: 768px) {
+
+  .logo {
+    width: 30%;
+  }
+
+  .sup {
+    align-items: center;
+    gap: 5%;
+  }
+nav{
+    font-size: 15px;
+}
+  .season {
+    min-width: 425px;
+  }
+
+  header {
+    padding-top: 7%;
+    padding-bottom: 2%;
+  }
+
+  main {
+    justify-content: space-between;
+  }
+
+  main > a {
+    width: auto;
+    text-align: center;
+  }
+
+  .box {
+    width: 190px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  h3 {
+    font-size: 0.9em;
+  }
+
+  h5 {
+    font-size: 0.7em;
+  }
+
+  .wirte h2 {
+    font-size: 1.1em;
+    padding-bottom: 5%;
+  }
+
+  .wirte p {
+    font-size: 0.8em;
+    line-height: 1.6;
+  }
+}
+
+
+/*------------------------------------ 1024px ------------------------------------*/
+
+@media screen and (min-width: 1024px) {
+
     header {
-      padding-top: 12%;
-      padding-bottom: 1%;
+        padding: 0 5%;
     }
+
+    .logo {
+        width: 30%;
+    }
+
+    nav {
+        font-size: 20px;
+    }
+
     .sup {
-      flex-direction: column;
-      align-items: center;
-      padding-bottom: 20%;
-    }    
-    .season{
-      width: 65%;
-      min-width: 325px;
-      margin-top: 6%;
-    }    
-    main{
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-evenly;
-      padding-bottom: 13%;
+        flex-direction: row;
+        align-items: initial;
+        gap: initial;
+        padding-bottom: 0;
     }
+
+    .season {
+        width: 80%;
+        min-width: 0;
+        margin-top: 0;
+    }
+
+    main {
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: stretch;
+        padding: 5% 1%;
+    }
+
     main > a {
-      width: 47%;
-      margin-bottom: 9%;
+        width: auto;
+        margin-bottom: 0;
     }
+
     .box {
-      width: 175px;
-      height: 290px;
-    } 
-    .wirte{
-      width: 85%;
-      align-items: center;
+        width: 40vh;
+        height: 60vh;
+        margin: 0;
     }
-    .wirte h2{
-      font-size: 1.2em;
-      padding-bottom: 5%;
+
+    .wirte {
+        width: auto;
+        margin-top: 20%;
     }
-    .wirte p{
-      font-size: 0.8em;
-      line-height: 1.6;
+
+    .wirte h2 {
+        font-size: 2em;
+        padding-bottom: 3%;
+    }
+
+    .wirte p {
+        font-size: 1em;
+        line-height: normal;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    h5 {
+        font-size: 1em;
     }
 }
-/*----------------------------------------------*/
-
-    @media screen and (max-width:320px) {
-    .logo{
-      width: 40%;
-      text-align: center;
-    }
-    nav{
-      font-size: 0.7em;
-    }
-    header {
-      padding-top: 12%;
-      padding-bottom: 1%;
-    }
-    .sup {
-      flex-direction: column;
-      align-items: center;
-      padding-bottom: 20%;
-    }    
-    .season{
-      width: 80%;
-      margin-top: 6%;
-      align-items: center;
-    }    
-    main{
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-evenly;
-      padding-bottom: 13%;
-    }
-    main > a {
-      width: 47%;
-      margin-bottom: 9%;
-    }
-    .box {
-      width: 145px;
-      height: 270px;
-    } 
-    .wirte{
-      width: 85%;
-      align-items: center;
-    }
-    .wirte h2{
-      font-size: 1.2em;
-      padding-bottom: 5%;
-    }
-    .wirte p{
-      font-size: 0.8em;
-      line-height: 1.6;
-    }
-
-
-    }

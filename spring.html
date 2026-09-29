@@ -17,7 +17,7 @@
         <a href="index.html"><img src="img/logo.svg" alt="사진"></a>
       </div>
       <nav>
-        <a class="english" href="#" onclick="menu()">MENU</a>
+        <a class="menu english" href="#">MENU</a>
         <ul class="sub">
           <li><a class="kor" href="#">향수 라인업</a></li>
           <li><a class="kor" href="#">Myosotis 스토리</a></li>
@@ -59,9 +59,11 @@
       </a>
     </main>
   </body>
-<script>
-    function menu(){
-    $('.sub').css('display','block');
-    }
-</script>
+  <script>    
+  $(function(){
+      $(".menu").click(function(){
+        $(".sub").toggleClass('open');
+      });
+    });
+  </script>
   </html>

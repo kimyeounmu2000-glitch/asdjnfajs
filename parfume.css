@@ -1,0 +1,343 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+
+body{ background-color: #f6f3ee; color: #4c4c4c;}
+
+
+header {
+        /*border: 3px solid darkcyan;*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        height: 100px;
+        margin: 2% auto;
+        padding: 0 5%;
+        position: relative;
+}
+
+.logo {
+        width: 30%;
+        max-width: 300px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        /*border: 3px solid burlywood;*/
+}
+
+nav {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bolder;
+        /*border: 2px solid cadetblue;*/
+        position: absolute;
+        top: 5%;
+        left: 0%;
+}
+.sub{
+    height: 1000%;
+    width: 250%;
+    /*border: 2px solid darkblue;*/
+    visibility: hidden;
+    transform: translateY(-30px);
+    opacity: 0;
+    transition: transform 300ms, opacity 300ms;
+    position: absolute;
+    top: 140%;
+    left: 0%;
+    text-align: left;
+    z-index: 99;
+    font-size: 15px;
+}
+.sub.open{
+  visibility: visible;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.sub li{
+    line-height: 5;
+    transition: 300ms;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.sub li:hover{
+  background-color: #f6f3ee;
+  color: black;
+  opacity: 0.4;
+}
+
+a{ color: #4c4c4c; text-decoration: none; }
+
+header ul{ list-style: none; }
+
+
+/*--------------------------------------------------------------------------------*/
+
+h3{
+    font-size: 1.7em;  /* 글자 크기 조절 */
+    font-family: "Inria Serif", serif;
+}
+
+
+#all{
+    padding: 2%;  /* 공간 만들기 */
+    width: 80%;  /* 가로 크기 조절 */
+    /*border: 2px solid green;*/
+    margin: 0 auto; /* 가운데 배치하기 */
+}
+
+.set{   
+    display: flex;  /* 가로로 글상자와 그림 배치하기 */
+    gap: 12%; /* 글상자와 그림 띄우기 */
+    padding-bottom: 12%;  /* 아래에서 공간 띄우기 */}
+
+#pic img{
+      width: 63vh;  /* 그림 크기 조절 */
+}
+
+#text{
+    /*border: 1px solid black;*/
+    padding: 3%;  /* 글자 조금 떨어트리기 */
+    text-align: left; /* 글자 왼쪽으로 붙이기 */
+    margin-top: 10%;  /* 글자 아래로 내리기 */
+}
+
+.note h3{
+    padding-top: 4%; /* 위에 공간 만들기 */
+    text-align: center; /* 가운데 글자 배치 */
+}
+
+.note ul{
+    display: flex;  /* 글자 한 줄로 만들기 */
+    padding: 6%; /* 공간 창출 */
+    text-align: center; /* 글자 가운데 오게 만들기 */
+}
+
+.tag{
+    margin-bottom: 20px;/* 글자 공간 만들기 */
+    font-size: 1.3em;/* 폰트 사이즈 조절 */
+}
+
+.eng{
+    font-size: 1.2em;/* 폰트 굵기 조절 */
+    font-weight: 300;/* 글자 크기 조절 */
+    }
+
+.ko{
+    font-weight: 300;/* 폰트 사이즈 조절 */
+    font-size: 0.9em;/* 글자 크기 조절 */
+    padding-bottom: 7%;/* 글자별 공간 조율 */
+}
+
+.note li{
+        list-style: none;/* 점 없애기 */
+        flex: 1;  /* 공간 나눠가지기 */
+        }
+
+hr{
+    width: 80%; /* 선 크기 자르기 */
+    margin: 5% auto;/* 선 위아래 공간 조절 */
+}
+/*---------------------------------------------------------------------------*/
+.lion{
+    /*border: 2px solid wheat;*/
+    padding-top: 20%;
+    padding-bottom: 10%;
+    display: flex;  /* 글자들 가운데 배치 */
+    text-align: center;/* 글자 가운데 배치 */
+    justify-content: space-between;
+}
+.hand{
+    margin-bottom: 20px;/* 글자 공간 만들기 */
+    font-size: 1.2em;
+    font-weight: 300;/* 폰트 사이즈 조절 */
+}
+.foot{
+    font-weight: 320;/* 폰트 사이즈 조절 */
+    font-size: 1.1em;/* 글자 크기 조절 */
+}
+
+
+
+.english{
+    font-family: "Inria Serif"  ;
+}
+
+.kor{
+    font-family: 'MaruBuriExtraLight';
+}
+
+
+
+/*미디어쿼리*/
+@media screen and (min-width: 320px) {
+
+header { 
+    padding-top: 0%; 
+    padding-bottom: 0%; 
+} 
+nav{
+    font-size: 7px;
+}
+#all{
+    width: 100%;
+}
+.set{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#pic img{
+    width: 270px;
+}
+#text>h3{
+    font-size: 12px;
+}
+#text>p{
+    font-size: 16px;
+}
+.lion{
+    font-size: 9px;
+}
+.note{
+    font-size: 9px;
+}
+}
+
+@media screen and (min-width: 375px) {
+
+header { 
+    padding-top: 0%; 
+    padding-bottom: 0%; 
+} 
+nav{
+    font-size: 8px;
+}
+#pic img{
+    width: 320px;
+}
+#text>h3{
+    font-size: 16px;
+}
+#text>p{
+    font-size: 11px;
+}
+.lion{
+    font-size: 11px;
+}
+.note{
+    font-size: 11px;
+}
+}
+
+@media screen and (min-width: 480px) {
+
+header { 
+    padding-top: 0%; 
+    padding-bottom: 0%; 
+} 
+nav{
+    font-size: 11px;
+}
+#pic img{
+    width: 340px;
+}
+#text>h3{
+    font-size: 17px;
+}
+#text>p{
+    font-size: 12px;
+}
+.lion{
+    font-size: 12px;
+}
+.note{
+    font-size: 12px;
+}
+}
+
+@media screen and (min-width: 768px) {
+.logo{
+    width: 30%;
+}
+header { 
+    padding-top: 0%; 
+    padding-bottom: 0%; 
+} 
+nav{
+    font-size: 15px;
+}
+#all{
+    width: 80%;
+}
+.set{
+    flex-direction: row;
+    align-items: center;
+}
+#pic img{
+    width: 320px;
+}
+#text>h3{
+    font-size: 19px;
+}
+#text>p{
+    font-size: 12px;
+}
+.lion{
+    font-size: 12px;
+}
+.note{
+    font-size: 12px;
+}
+}
+
+@media screen and (min-width: 1024px) {
+.logo{ 
+    width: 30%; 
+} 
+header { 
+    padding-top: 0%; 
+    padding-bottom: 0%; 
+} 
+#all{ 
+    width: 80%; 
+} 
+nav{
+    font-size: 20px ;
+}
+.set{ 
+    flex-direction: row; 
+    align-items: center; 
+} 
+#pic img{ 
+    width: 63vh; 
+}
+
+#text>h3{ 
+    font-size: 27px; 
+        }
+#text>p{
+    font-size: 15px;
+}
+h3{ 
+    font-size: 27px; 
+        }
+
+.ko,.eng{
+    font-size: 17px;
+}
+.tag{
+    font-size: 21px;
+}
+.foot{
+    font-size: 18px;
+}
+.hand{
+    font-size: 20px;
+}
+}
