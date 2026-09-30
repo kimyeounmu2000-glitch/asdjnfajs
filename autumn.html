@@ -8,13 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css" rel="stylesheet">
     <title>Myosotis autumn</title>
-    <link rel="stylesheet" href="season.css">
-    <link rel="stylesheet" href="season_autumn_pic.css">
+    <link rel="stylesheet" href="css/season_autumn_pic.css">
+    <link rel="stylesheet" href="css/season.css">
+    <script src="js/menu.js"></script>
   </head>
   <body>
     <header>
       <div class="logo">
-        <a href="index.html"><img src="logo.svg" alt="사진"></a>
+        <a href="index.html"><img src="img/logo.svg" alt="사진"></a>
       </div>
       <nav>
         <a class="menu english" href="#" onclick="menu()">MENU</a>
@@ -37,33 +38,26 @@
       </div><!--sub-->
     </div>
     <main class="english">
-      <a href="#">
-        <div class="box b1"><img src="jazz.png" alt="사진"></div>
+      <a href="au_jazz.html">
+        <div class="box b1"><img src="img/jazz.png" alt="사진"></div>
           <h3>Jazz Club</h3>
           <h5>Maison Margiela</h5>
       </a>
-      <a href="#">
-        <div class="box b2"><img src="eau.png" alt="사진"></div>
+      <a href="au_rihla.html">
+        <div class="box b2"><img src="img/eau.png" alt="사진"></div>
           <h3>Eau Rihla</h3>
           <h5>Diptyque</h5>
       </a>
-      <a href="#">
-        <div class="box b3"><img src="touch.png" alt="사진"></div>
+      <a href="au_touch.html">
+        <div class="box b3"><img src="img/touch.png" alt="사진"></div>
           <h3>Touch</h3>
           <h5>Burberry</h5>
       </a>
-      <a href="#">
-        <div class="box b4"><img src="Ombré.png" alt="사진"></div>
+      <a href="au_ombre.html">
+        <div class="box b4"><img src="img/Ombré.png" alt="사진"></div>
           <h3>Ombré Leather Parfum</h3>
           <h5>Tom Ford</h5>
       </a>
     </main>
   </body>
-<script>
-    $(function(){
-      $(".menu").click(function(){
-        $(".sub").toggleClass('open');
-      });
-    });
-</script>
   </html>

@@ -8,18 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css" rel="stylesheet">
     <title>Myosotis</title>
-    <link rel="stylesheet" href="index.css">
+    <script src="js/menu.js"></script>
+    <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
     <header>
       <div class="logo">
-        <a href="index.html"><img src="logo.svg" alt="사진"></a>
+        <a href="index.html"><img src="img/logo.svg" alt="사진"></a>
       </div>
       <nav>
-        <a class="menu english" href="#" onclick="menu()">MENU</a>
+        <a class="menu english" href="#">MENU</a>
         <ul class="sub">
           <li><a class="kor" href="#">향수 라인업</a></li>
-          <li><a class="kor" href="#">Myosotis 스토리</a></li>
+          <li><a class="kor" href="footer">Myosotis 스토리</a></li>
           <li><a class="kor" href="#">언어</a></li>
         </ul>
       </nav>
@@ -46,28 +47,28 @@
             <h2 class="english">FIND YOUR SCENT</h2>
             <div class="se1">
               <div class="season">
-                <div class="qha"></div>
+                <a href="spring.html"><div class="qha"></div></a>
                 <a href="spring.html" class="sea">
                   <p class="english">SPRING</p>
                   <h5 class="kor">봄</h5>
                 </a>
               </div>
               <div class="season">
-                <div class="si"></div>
+                <a href="summer.html"><div class="si"></div></a>
                 <a href="summer.html" class="sea">
                   <p class="english">SUMMER</p>
                   <h5 class="kor">여름</h5>
                 </a>
               </div>
               <div class="season">
-                <div class="aut"></div>
+                <a href="autumn.html"><div class="aut"></div></a>
                 <a href="autumn.html" class="sea">
                   <p class="english">AUTUMN</p>
                   <h5 class="kor">가을</h5>
                 </a>
               </div>
               <div class="season">
-                  <div class="win"></div>
+                  <a href="winter.html"><div class="win"></div></a>
                 <a href="winter.html" class="sea">
                   <p class="english">WINTER</p>
                   <h5 class="kor">겨울</h5>
@@ -81,7 +82,7 @@
           <div class="par">
             <h2 class="kor">퍼퓸</h2><h2 class="english">(Parfum)</h2>
             <p class="kor">
-              부향률 15–30%, 6~8시간 이상 지속
+              부향률 15–30%, 6시간 이상 지속
               적은 양으로도 짙게 남는, 가장 응축된 향의 형태입니다.
             </p>
           </div>
@@ -123,7 +124,7 @@
       <div>
         <h3 class="kor">&lt;잊지 말아요, "나" 라는 향기&gt;</h3>
         <div class="foot">
-            <img src="myo.jpg" alt="포트폴리오 이미지">
+            <img src="img/myo.jpg" alt="포트폴리오 이미지">
             <p class="kor"> 
               물망초의 꽃말처럼, 향수는 예로부터<br> "나를 잊지 말아줘"라는 마음을 담아 건네는 선물이었습니다.<br><br>
               함께한 시간이 지나 각자의 자리로 돌아간 뒤에도,<br> 어디선가 우연히 그 향을 스치는 순간이 옵니다.<br><br>
@@ -133,11 +134,4 @@
       </div>
     </footer>
   </body>
-  <script>
-    $(function(){
-      $(".menu").click(function(){
-        $(".sub").toggleClass('open');
-      });
-    });
-  </script>
   </html>
